@@ -1,3 +1,90 @@
-html{
+html {
     background-color: #001D3D;
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+}
+
+/* Flexbox header */
+header {
+    display: flex;
+    justify-content: space-between; /* logo on left, nav + button on right */
+    align-items: center;            
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+/* Logo */
+#logo {
+    color: #DAC1F1;
+    font-weight: 900;
+    margin: 0;
+}
+
+/* Nav container */
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Nav links */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    gap: 20px;
+}
+
+nav a {
+    color: #EDEDED;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #DAC1F1;
+}
+
+.active {
+    color: #DAC1F1;
+}
+
+/* Button */
+nav button {
+    background: #DAC1F1;
+    border: 1px solid #DAC1F1;
+    border-radius: 20px;
+    padding: 6px 20px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 16px;
+    color: #001D3D;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background: transparent;
+    color: #DAC1F1;
+}
+
+#info {
+    background-color: red;
+}
+
+.cursor {
+    animation: blink 0.9s infinite;
+    font-weight: normal;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+#graphic{
+    background-color: green;
 }
