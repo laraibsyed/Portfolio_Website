@@ -27,7 +27,7 @@ header {
 nav {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 2w;
 }
 
 /* Nav links */
@@ -55,7 +55,7 @@ nav a:hover {
 }
 
 /* Button */
-nav button {
+button {
     background: #DAC1F1;
     border: 1px solid #DAC1F1;
     border-radius: 20px;
@@ -67,24 +67,47 @@ nav button {
     transition: 0.3s;
 }
 
-nav button:hover {
+button:hover {
     background: transparent;
     color: #DAC1F1;
 }
 
-#info {
-    background-color: red;
+/* #home{
+    display: flex;
+    width: 100vw;
+    height: 100vw;
 }
 
-.cursor {
-    animation: blink 0.9s infinite;
-    font-weight: normal;
+#info, #graphic{
+    flex: 1;
+    display: flex;
+} */
+
+.homepage {
+    display: flex;
+    width: 100vw;
+    height: 88vh;
+    
+}
+
+/* Info section */
+#info {
+    flex: 1;    
+    color: #EDEDED;
+    background-color: red;
+    padding-left: 2vw;
+    display: flex;
+    flex-direction: column;      /* stack text vertically */
+    justify-content: center;     /* vertical centering */
+    line-height: 0.5;
+}
+
+/* Graphic section */
+#graphic {
+    flex: 1;                     /* takes other half */ 
+    background-color: green;
 }
 
 @keyframes blink {
     50% { opacity: 0; }
-}
-
-#graphic{
-    background-color: green;
 }
