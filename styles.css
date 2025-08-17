@@ -13,7 +13,6 @@ header {
     padding: 10px 20px;
     position: sticky;
     top: 0;
-    background-color: #fff;
 }
 
 /* Logo */
@@ -54,10 +53,15 @@ nav a:hover {
     color: #DAC1F1;
 }
 
+nav button{
+    margin-left: 20px;
+}
+
 /* Button */
 button {
     background: #DAC1F1;
     border: 1px solid #DAC1F1;
+    font-family: 'Poppins';
     border-radius: 20px;
     padding: 6px 20px;
     cursor: pointer;
@@ -65,6 +69,7 @@ button {
     font-size: 16px;
     color: #001D3D;
     transition: 0.3s;
+    margin: 5px;
 }
 
 button:hover {
@@ -72,20 +77,10 @@ button:hover {
     color: #DAC1F1;
 }
 
-/* #home{
-    display: flex;
-    width: 100vw;
-    height: 100vw;
-}
-
-#info, #graphic{
-    flex: 1;
-    display: flex;
-} */
 
 .homepage {
     display: flex;
-    width: 100vw;
+    width: 99vw;
     height: 88vh;
     
 }
@@ -94,20 +89,32 @@ button:hover {
 #info {
     flex: 1;    
     color: #EDEDED;
-    background-color: red;
-    padding-left: 2vw;
+    padding-left: 2vw; 
     display: flex;
     flex-direction: column;      /* stack text vertically */
     justify-content: center;     /* vertical centering */
     line-height: 0.5;
 }
 
-/* Graphic section */
 #graphic {
     flex: 1;                     /* takes other half */ 
-    background-color: green;
+    display: flex;               /* make it a flex container */
+    justify-content: center;     /* center horizontally */
+    align-items: center;         /* center vertically */
+    padding: 20px;               /* optional padding */
 }
+
+#code {
+    color: #818181;
+    padding: 20px;
+    border-radius: 10px;
+     border: 2px solid rgba(218, 193, 241, 0.5);
+    font-family: 'Courier New', Courier, monospace; /* code-style font */
+    white-space: pre-line; /* preserves line breaks */
+}
+
 
 @keyframes blink {
     50% { opacity: 0; }
 }
+
