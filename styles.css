@@ -77,6 +77,11 @@ button:hover {
     color: #DAC1F1;
 }
 
+.homepage h1{
+    font-size: 70px; 
+    color: #DAC1F1;
+}
+
 
 .homepage {
     display: flex;
@@ -118,3 +123,11 @@ button:hover {
     50% { opacity: 0; }
 }
 
+#aboutme{
+    padding-left: 2vw;
+    background-color:deeppink;
+}
+
+#card{
+    background-color: darkseagreen;
+}
