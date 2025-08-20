@@ -113,7 +113,7 @@ button:hover {
     color: #818181;
     padding: 20px;
     border-radius: 10px;
-     border: 2px solid rgba(218, 193, 241, 0.5);
+    border: 2px solid rgba(218, 193, 241, 0.5);
     font-family: 'Courier New', Courier, monospace; /* code-style font */
     white-space: pre-line; /* preserves line breaks */
 }
@@ -123,11 +123,60 @@ button:hover {
     50% { opacity: 0; }
 }
 
-#aboutme{
-    padding-left: 2vw;
-    background-color:deeppink;
+/* About section container */
+#about {
+    display: flex;       /* put children side by side */
+    width: 99vw;         /* same width as homepage */
+    height: 88vh;        /* same height as homepage */
 }
 
-#card{
+/* About Me */
+#aboutme {
+    flex: 1;    
+    color: #EDEDED;
+    padding-left: 2vw; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;   /* vertically center content */
+    background-color: deeppink;
+}
+
+/* Card */
+#card {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: darkseagreen;
+}
+
+.container{
+    display: flex;
+}
+
+/* Card */
+#education {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blueviolet;
+    border-radius: 10px;
+    border: 2px solid rgba(218, 193, 241, 0.5);
+    padding: 60px;
+}
+
+#work {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: khaki;
+    border-radius: 10px;
+    border: 2px solid rgba(218, 193, 241, 0.5);
+    padding: 60px;
+}
+
+h1{
+    font-size: 40px;
 }
