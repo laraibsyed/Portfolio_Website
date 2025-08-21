@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const words = ["Working", "Drinking Matcha", "Watching F1","Coding", "Building Legos", "Developing"];
+    const words = ["Working...", "Drinking Matcha...", "Watching F1...","Coding...", "Building Legos...", "Developing..."];
     let i = 0;
     let j = 0;
     let isDeleting = false;
