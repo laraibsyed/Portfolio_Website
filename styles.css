@@ -8,11 +8,13 @@ html {
 /* Flexbox header */
 header {
     display: flex;
-    justify-content: space-between; /* logo on left, nav + button on right */
-    align-items: center;            
+    justify-content: space-between;
+    /* logo on left, nav + button on right */
+    align-items: center;
     padding: 10px 20px;
     position: sticky;
     top: 0;
+    background-color: #001D3D;
 }
 
 /* Logo */
@@ -27,6 +29,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 2w;
+
 }
 
 /* Nav links */
@@ -34,7 +37,7 @@ nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; 
+    display: flex;
     gap: 20px;
 }
 
@@ -53,7 +56,7 @@ nav a:hover {
     color: #DAC1F1;
 }
 
-nav button{
+nav button {
     margin-left: 20px;
 }
 
@@ -77,8 +80,8 @@ button:hover {
     color: #DAC1F1;
 }
 
-.homepage h1{
-    font-size: 70px; 
+.homepage h1 {
+    font-size: 70px;
     color: #DAC1F1;
 }
 
@@ -87,26 +90,33 @@ button:hover {
     display: flex;
     width: 99vw;
     height: 88vh;
-    
+
 }
 
 /* Info section */
 #info {
-    flex: 1;    
+    flex: 1;
     color: #EDEDED;
-    padding-left: 2vw; 
+    padding-left: 2vw;
     display: flex;
-    flex-direction: column;      /* stack text vertically */
-    justify-content: center;     /* vertical centering */
+    flex-direction: column;
+    /* stack text vertically */
+    justify-content: center;
+    /* vertical centering */
     line-height: 0.5;
 }
 
 #graphic {
-    flex: 1;                     /* takes other half */ 
-    display: flex;               /* make it a flex container */
-    justify-content: center;     /* center horizontally */
-    align-items: center;         /* center vertically */
-    padding: 20px;               /* optional padding */
+    flex: 1;
+    /* takes other half */
+    display: flex;
+    /* make it a flex container */
+    justify-content: center;
+    /* center horizontally */
+    align-items: center;
+    /* center vertically */
+    padding: 20px;
+    /* optional padding */
 }
 
 #code {
@@ -114,69 +124,217 @@ button:hover {
     padding: 20px;
     border-radius: 10px;
     border: 2px solid rgba(218, 193, 241, 0.5);
-    font-family: 'Courier New', Courier, monospace; /* code-style font */
-    white-space: pre-line; /* preserves line breaks */
+    font-family: 'Courier New', Courier, monospace;
+    /* code-style font */
+    white-space: pre-line;
+    /* preserves line breaks */
 }
 
 
 @keyframes blink {
-    50% { opacity: 0; }
+    50% {
+        opacity: 0;
+    }
 }
 
 /* About section container */
 #about {
-    display: flex;       /* put children side by side */
-    width: 99vw;         /* same width as homepage */
-    height: 88vh;        /* same height as homepage */
+    display: flex;
+    /* put children side by side */
+    width: 99vw;
+    /* same width as homepage */
+    height: 88vh;
+    /* same height as homepage */
 }
 
-/* About Me */
 #aboutme {
-    flex: 1;    
+    flex: 1;
     color: #EDEDED;
-    padding-left: 2vw; 
+    padding-left: 2vw;
     display: flex;
-    flex-direction: column; 
-    justify-content: center;   /* vertically center content */
-    background-color: deeppink;
+    flex-direction: column;
+    justify-content: center;
+    /* instead of center */
+    align-items: flex-start;
+    /* keep everything left-aligned */
+    padding-right: 2vw;
 }
 
-/* Card */
+#aboutme h1 {
+    margin-bottom: 10px;
+    /* smaller gap under About Me */
+}
+
+#aboutme p {
+    margin-top: 0;
+    /* removes the extra gap above paragraph */
+    line-height: 1.5;
+    /* keeps text readable */
+}
+
+/* Card container */
+#cardcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    color: #EDEDED;
+    padding: 50px;            /* space between content and border */
+    border-radius: 20px;
+    border: 2px solid rgba(218, 193, 241, 0.5);
+    width: fit-content;             /* shrink-wrap to content */
+    height: fit-content;            /* shrink-wrap to content */
+    margin: auto;                   /* center in parent */
+}
+
+/* Inner card */
 #card {
-    flex: 1; 
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
-    background-color: darkseagreen;
+    flex-direction: column;
+    text-align: left;
+    color: #EDEDED;
+    gap: 10px;                      /* optional spacing between child elements */
 }
 
-.container{
+.container {
     display: flex;
+    gap: 1rem;
+    padding-bottom: 20px;
 }
 
-/* Card */
-#education {
-    flex: 1; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: blueviolet;
-    border-radius: 10px;
-    border: 2px solid rgba(218, 193, 241, 0.5);
-    padding: 60px;
-}
-
+/* Education & Work cards */
+#education,
 #work {
-    flex: 1; 
+    flex: 1;
+    border: 2px solid rgba(218, 193, 241, 0.5);
+    border-radius: 15px;
+    padding: 7px;
+    color: #EDEDED;
+    line-height: 2;
+}
+
+/* Section titles */
+#education h3,
+#work h3 {
+    color: #dac1f1;
+    /* font-size: 1.5rem; */
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0.5vw;
+
+}
+
+/* Timeline items */
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    padding-left: 30px;
+
+}
+
+/* Outer circle */
+.circle {
+    width: 20px;          /* slightly bigger */
+    height: 20px;
+    border: 2px solid #dac1f1;
+    border-radius: 50%;
+    background: transparent;
+    position: absolute;
+    left: 0.5;
+    top: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: khaki;
-    border-radius: 10px;
-    border: 2px solid rgba(218, 193, 241, 0.5);
-    padding: 60px;
 }
 
-h1{
+/* Inner circle */
+.circle::after {
+    content: '';
+    width: 16px;          /* smaller inner circle */
+    height: 14px;
+    background-color: #dac1f1;  /* inner color */
+    border-radius: 50%;
+}
+
+
+.timeline-item h4 {
+    margin: 0;
+    color: #fff;
+    /* font-size: 1.1rem; */
+   padding-left: 1.5vw;
+
+}
+
+.timeline-item p {
+    margin: 3px 0;
+    color: rgba(218, 193, 241, 0.5);
+    padding-left: 2vw;
+
+}
+
+button {
+    background: #DAC1F1;
+    border: 1px solid #DAC1F1;
+    font-family: 'Poppins';
+    border-radius: 20px;
+    padding: 6px 20px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 16px;
+    color: #001D3D;
+    transition: 0.3s;
+    margin: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* space between text and icon */
+}
+
+button i.fa-arrow-right {
+    color: #001D3D;              /* default icon color */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: transparent;
+    color: #DAC1F1;
+}
+
+button:hover i.fa-arrow-right {
+    color: #DAC1F1;               /* icon color on hover */
+    transform: translateX(5px);   /* optional slide effect */
+}
+
+
+h1 {
     font-size: 40px;
+}
+
+.picture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    background-image: url("img/profile_picture.jpeg");
+    background-size: contain;
+}
+
+.online {
+    width: 30px;
+    height: 30px;
+    background-color: #00cc44;
+    /* green */
+    border-radius: 50%;
+    border: 3px solid #001f3f;
+    /* navy border */
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }

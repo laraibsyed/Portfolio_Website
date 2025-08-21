@@ -8,6 +8,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <script src="https://kit.fontawesome.com/13137c663d.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
     <title>Laraib Syed's Portfolio</title>
 </head>
@@ -69,28 +70,80 @@
             </div>
         </div>
     </section>
+
+
     <section id="about">
         <div id="aboutme">
-            <h1>About Me</h1>
-            <p>Passionate about data science and AI, I thrive on uncovering insights. With skills in programming,
+            <h1 style="color: #dac1f1;">About Me</h1>
+            <p style="font-size: 20px;">Passionate about data science and AI, I thrive on uncovering insights. With
+                skills in programming,
                 databases, and data visualization, I transform complex ideas into clear, actionable outcomes. I enjoy
                 bridging creativity and technology, bringing a curious and detail-oriented mindset to every project I
                 take on.</p>
             <div class="container">
+                <!-- Education -->
                 <div id="education">
-                    middlesex uni
+                    <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+
+                    <div class="timeline-item">
+                        <div class="circle"></div>
+                        <div class="content">
+                            <h4>MSc Data Science and AI</h4>
+                            <p>Middlesex University Dubai</p>
+                            <p>2025 – Present</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="circle"></div>
+                        <div class="content">
+                            <h4>BSc Honours Information Technology</h4>
+                            <p>Middlesex University Dubai</p>
+                            <p>2020 – 2024</p>
+                            <p style="color: #EDEDED;"><b>GPA:</b> 4.0</p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Work -->
                 <div id="work">
-                    work experience
+                    <h3><i class="fa-solid fa-briefcase"></i> Work Experience</h3>
+
+                    <div class="timeline-item">
+                        <div class="circle"></div>
+                        <div class="content">
+                            <h4>Digital Transformation Intern</h4>
+                            <p>Volkswagen Group Middle East</p>
+                            <p>Dubai, United Arab Emirates</p>
+                            <p>2024 – Present</p>
+                            <p style="color: #EDEDED;">Under Group Customer Experience and Digital Brands: Audi,
+                                Volkswagen & Skoda</p>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-            <button>More about me</button>
 
+            <button>More about me <i class="fa-solid fa-arrow-right"></i></button>
         </div>
-
         <div id="card">
-            hi
+            <div id="cardcontainer">
+                <div class="picture">
+                    <div class="online"></div>
+                </div>
+                <div id="status">|</div>
+                <div id="cardinfo">
+                    <h2>Laraib Syed</h2>
+                    <h3>Data Science & Artificial Intelligence Student</h3>
+                    <h4>Started coding at 13 — still just as curious</h4>
+                    <div id="skills">
+                        Python
+                        Tensorflow
+                        MySQL
+                        Keras
+                    </div>
+                    <a href="#Techstack">More Skills</a>
+                </div>
+            </div>
         </div>
     </section>
 </body>
