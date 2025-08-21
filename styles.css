@@ -180,12 +180,15 @@ button:hover {
     flex-direction: column;
     text-align: left;
     color: #EDEDED;
-    padding: 50px;            /* space between content and border */
+    padding: 60px;
+    /* space between content and border */
     border-radius: 20px;
     border: 2px solid rgba(218, 193, 241, 0.5);
-    width: fit-content;             /* shrink-wrap to content */
-    height: fit-content;            /* shrink-wrap to content */
-    margin: auto;                   /* center in parent */
+    width: fit-content;
+    /* shrink-wrap to content */
+    height: fit-content;
+    /* shrink-wrap to content */
+    margin: auto;
 }
 
 /* Inner card */
@@ -197,8 +200,15 @@ button:hover {
     flex-direction: column;
     text-align: left;
     color: #EDEDED;
-    gap: 10px;                      /* optional spacing between child elements */
+    gap: 10px;
+    /* optional spacing between child elements */
 }
+
+#cardinfo {
+    line-height: 0.5;
+}
+
+
 
 .container {
     display: flex;
@@ -242,7 +252,8 @@ button:hover {
 
 /* Outer circle */
 .circle {
-    width: 20px;          /* slightly bigger */
+    width: 20px;
+    /* slightly bigger */
     height: 20px;
     border: 2px solid #dac1f1;
     border-radius: 50%;
@@ -258,9 +269,11 @@ button:hover {
 /* Inner circle */
 .circle::after {
     content: '';
-    width: 16px;          /* smaller inner circle */
+    width: 16px;
+    /* smaller inner circle */
     height: 14px;
-    background-color: #dac1f1;  /* inner color */
+    background-color: #dac1f1;
+    /* inner color */
     border-radius: 50%;
 }
 
@@ -269,7 +282,7 @@ button:hover {
     margin: 0;
     color: #fff;
     /* font-size: 1.1rem; */
-   padding-left: 1.5vw;
+    padding-left: 1.5vw;
 
 }
 
@@ -294,11 +307,13 @@ button {
     margin: 5px;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem; /* space between text and icon */
+    gap: 0.5rem;
+    /* space between text and icon */
 }
 
 button i.fa-arrow-right {
-    color: #001D3D;              /* default icon color */
+    color: #001D3D;
+    /* default icon color */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -308,8 +323,10 @@ button:hover {
 }
 
 button:hover i.fa-arrow-right {
-    color: #DAC1F1;               /* icon color on hover */
-    transform: translateX(5px);   /* optional slide effect */
+    color: #DAC1F1;
+    /* icon color on hover */
+    transform: translateX(5px);
+    /* optional slide effect */
 }
 
 
@@ -335,6 +352,76 @@ h1 {
     border: 3px solid #001f3f;
     /* navy border */
     position: absolute;
-    bottom: 10px;
+    bottom: 5px;
     right: 10px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    /* allows tags to wrap to next line */
+    gap: 10px;
+    /* space between tags */
+    padding-bottom: 2vw;
+}
+
+.tags p {
+    background-color: rgba(218, 193, 241, 0.5);
+    border: 1px solid rgba(218, 193, 241, 1);
+    border-radius: 20px;
+    padding: 12px;
+    width: 5vw;
+    text-align: center;
+    color: #EDEDED;
+}
+
+
+.tags p:hover {
+    background-color: #DAC1F1;
+    transition: .4s ease;
+    color: #001D3D;
+    cursor: pointer;
+}
+
+a {
+    color: #EDEDED;
+}
+
+a:hover {
+    color: #DAC1F1;
+    transition: .4s ease;
+}
+
+#parent {
+    display: flex;
+    justify-content: flex-end;
+    /* push #status to the right */
+    align-items: center;
+    /* vertically center #status */
+    width: 100%;
+    /* full width of parent */
+}
+
+/* Parent container */
+#status {
+    display: flex;
+    justify-content: flex-end;
+    /* pushes children to the right */
+    align-items: center;
+    /* vertical alignment */
+    color: #001D3D;
+}
+
+
+#statusinfo {
+    background-color: #DAC1F1;
+    height: 3.5vh;
+    width: 9vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #001D3D;
+    border-radius: 30px;
+    font-weight: 500;
 }
