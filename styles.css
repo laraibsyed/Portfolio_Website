@@ -531,17 +531,44 @@ a:hover {
     border-color: #DAC1F1;
 }
 
-#techstack{
+#techstack {
     color: #EDEDED;
+    padding: 2rem 0; /* optional padding around section */
 }
 
-.skillsgrid{
+.skillsgrid {
     display: flex;
+    flex-wrap: wrap;       /* allows wrapping on smaller screens */
+    gap: 1rem;             /* spacing between skill cards */
+    justify-content: center; /* center the cards horizontally */
 }
 
-#skillset{
+#skillset {
     border: 2px solid rgba(218, 193, 241, 0.5);
     border-radius: 20px;
     flex: 1;
+    padding: 1rem;             /* overall padding */
+    min-width: 150px;
+    max-width: 500px;
+    height: 200px;             /* keep fixed height */
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* align content to top */
 }
+#techstack .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;            /* spacing between tags */
+    margin-bottom: 0;       /* remove extra space below tags */
+}
+
+#techstack .tags p {
+    padding: 0.2rem 1.3rem;
+    border-radius: 50px;
+    margin: 0;              /* remove default margins */
+}
+
+
+
 
