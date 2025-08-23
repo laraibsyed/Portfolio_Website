@@ -533,8 +533,17 @@ a:hover {
 
 #techstack {
     color: #EDEDED;
-    padding: 2rem 0; /* optional padding around section */
+    padding: 2rem 0;       /* optional padding around section */
+    width: 99vw;           
+    height: 80vh;
+    
+    display: flex;         /* make it a flex container */
+    flex-direction: column; 
+    justify-content: center; /* centers vertically */
+    align-items: center;     /* centers horizontally */
 }
+
+
 
 .skillsgrid {
     display: flex;
@@ -548,9 +557,8 @@ a:hover {
     border-radius: 20px;
     flex: 1;
     padding: 1rem;             /* overall padding */
-    min-width: 150px;
-    max-width: 500px;
-    height: 200px;             /* keep fixed height */
+    max-width: 450px;
+    height: 230px;             /* keep fixed height */
     background: rgba(255, 255, 255, 0.05);
     display: flex;
     flex-direction: column;
@@ -559,7 +567,7 @@ a:hover {
 #techstack .tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;            /* spacing between tags */
+    gap: 0.6rem;            /* spacing between tags */
     margin-bottom: 0;       /* remove extra space below tags */
 }
 
@@ -568,6 +576,45 @@ a:hover {
     border-radius: 50px;
     margin: 0;              /* remove default margins */
 }
+
+#techstack h1 {
+    align-self: flex-start; /* pushes only the heading to the left */
+    margin-left: 2rem;      /* optional: add some spacing from edge */
+    margin-bottom: 1.5rem;  /* spacing between h1 and grid */
+    color: #DAC1F1;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between; /* left & right columns */
+  align-items: flex-start;        /* align items at top */
+  padding: 2rem;
+    color: #EDEDED;                 /* text color */
+  flex-wrap: wrap;                /* handles smaller screens */
+}
+
+footer h2 {
+  width: 100%;                    /* ensures "Contact Me" is full width at top */
+  margin-bottom: 1rem;
+}
+
+#me {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;                   /* spacing between lines */
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;                      /* space between icons */
+  font-size: 1.5rem;              /* bigger icons */
+}
+
+#me h4,
+#me p {
+    margin: 0.2rem 0; /* smaller vertical spacing */
+}
+
 
 
 

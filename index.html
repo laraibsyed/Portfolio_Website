@@ -153,7 +153,7 @@
     </section>
 
     <section id="projects">
-        <h1>My Projects</h1>
+        <h1 style="color: #dac1f1;">My Projects</h1>
 
         <!-- wrapper grid -->
         <div class="project-grid">
@@ -217,47 +217,74 @@
     <section id="techstack">
         <h1>Tech Stack</h1>
         <div class="skillsgrid">
-        <div id="skillset">
-            <h3><i class="fa-solid fa-code"></i> Programming & Development</h3>
-            <div class="tags">
-                <p>Python</p>
-                <p>Java</p>
-                <p>C</p>
-                <p>C++</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>Javascript</p>
-                <p>PHP</p>
+            <div id="skillset">
+                <h3><i class="fa-solid fa-code"></i> Programming & Development</h3>
+                <div class="tags">
+                    <p>Python</p>
+                    <p>Java</p>
+                    <p>C</p>
+                    <p>C++</p>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>Javascript</p>
+                    <p>PHP</p>
+                </div>
             </div>
-        </div>
-        <div id="skillset">
-            <h3><i class="fa-solid fa-chart-line"></i> Data Science & AI</h3>
-            <div class="tags">
-                <p>Pandas</p>
-                <p>Numpy</p>
-                <p>Matplotlib</p>
-                <p>Scikit-Learn</p>
-                <p>Tensorflow</p>
-                <p>Keras</p>
-                <p>OpenCV</p>
-                <p>Tableau</p>
-                <p>MySQL</p>
-                <p>MongoDB</p>
+            <div id="skillset">
+                <h3><i class="fa-solid fa-chart-line"></i> Data Science & AI</h3>
+                <div class="tags">
+                    <p>Pandas</p>
+                    <p>Numpy</p>
+                    <p>Matplotlib</p>
+                    <p>Scikit-Learn</p>
+                    <p>Tensorflow</p>
+                    <p>Keras</p>
+                    <p>OpenCV</p>
+                    <p>Tableau</p>
+                    <p>MySQL</p>
+                    <p>MongoDB</p>
+                </div>
             </div>
-        </div>
-        <div id="skillset">
-            <h3><i class="fa-solid fa-chart-line"></i> Hardware & Tools</h3>
-            <div class="tags">
-                <p>Arduino</p>
-                <p>Raspberrypi</p>
-                <p>Git</p>
-                <p>Figma</p>
-                <p>Miro</p>
-                <p>Clickup</p>
+            <div id="skillset">
+                <h3><i class="fa-solid fa-chart-line"></i> Hardware & Tools</h3>
+                <div class="tags">
+                    <p>Arduino</p>
+                    <p>Raspberrypi</p>
+                    <p>Git</p>
+                    <p>Figma</p>
+                    <p>Miro</p>
+                    <p>Clickup</p>
+                </div>
             </div>
-        </div>
         </div>
     </section>
+
+    <footer>
+        <h2 style="color: #dac1f1;">Contact Me</h2>
+        <div id="me">
+            <h4>Laraib Syed</h4>
+            <p>Drop me a mail: laraibsyed92@gmail.com (Typically responds in 2 business days)</p>
+            <p>Dubai, UAE <span id="time"></span></p>
+        </div>
+
+        <div class="socials">
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-behance"></i>
+        </div>
+
+    </footer>
+
+    <script>
+        function showTime() {
+            const timeNow = new Date().toLocaleTimeString();
+            document.getElementById('time').textContent = timeNow;
+        }
+
+        showTime();
+        setInterval(showTime, 1000);
+    </script>
+
 </body>
 
 </html>
