@@ -3,18 +3,22 @@ html {
     font-family: 'Poppins';
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
+
 
 /* Flexbox header */
 header {
     display: flex;
     justify-content: space-between;
-    /* logo on left, nav + button on right */
     align-items: center;
     padding: 10px 20px;
-    position: sticky;
-    top: 0;
+    position: sticky;      /* keeps it at top */
+    top: 0;                /* distance from top */
+    z-index: 999;          /* ensure it stays above content */
+    width: 100%;           /* full width */
     background-color: #001D3D;
+    box-sizing: border-box; /* include padding in width */
 }
 
 /* Logo */
@@ -606,9 +610,22 @@ footer h2 {
 
 .socials {
   display: flex;
-  gap: 1rem;                      /* space between icons */
-  font-size: 1.5rem;              /* bigger icons */
+  gap: 1.5rem;                      /* space between icons */
+  font-size: 2rem;              /* bigger icons */
+  padding-right: 2vw;
+  
 }
+
+.fa-brands {
+    transition: transform 0.3s ease, color 0.3s ease; /* smooth transition */
+}
+
+.fa-brands:hover {
+    color: #DAC1F1;
+    transform: scale(1.2); /* grows 20% */
+    cursor: pointer;
+}
+
 
 #me h4,
 #me p {
