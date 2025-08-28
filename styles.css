@@ -64,8 +64,8 @@ nav button {
     margin-left: 20px;
 }
 
-/* Button */
-button {
+button,
+.btn {
     background: #DAC1F1;
     border: 1px solid #DAC1F1;
     font-family: 'Poppins';
@@ -77,12 +77,31 @@ button {
     color: #001D3D;
     transition: 0.3s;
     margin: 5px;
+    text-decoration: none; /* important for <a> */
+    display: inline-block; /* makes <a> behave like button */
 }
 
-button:hover {
+/* Hover effect */
+button:hover,
+.btn:hover {
     background: transparent;
     color: #DAC1F1;
 }
+
+/* Arrow inside button */
+button i,
+.btn i {
+  margin-left: 8px;
+  transition: transform 0.3s ease; /* smooth movement */
+}
+
+/* On hover, move arrow a bit to the right */
+button:hover i,
+.btn:hover i {
+  transform: translateX(5px);
+}
+
+
 
 .homepage h1 {
     font-size: 70px;
@@ -633,6 +652,19 @@ footer h2 {
 }
 
 
+/* ABOUT PAGE CSS */
 
+#edu-container {
+  display: flex;
+  gap: 20px; /* space between the two divs */
+  align-items: flex-start; /* align them at the top */
+}
 
+#edu, 
+#me {
+  flex: 1; /* each takes equal width */
+  padding: 10px;
+  border: 1px solid #DAC1F1; /* optional, just to visualize */
+  border-radius: 10px;
+}
 
