@@ -941,5 +941,137 @@ button:hover .fa-solid {
 /* Hover effect */
 .timeline .tags p:hover {
     background-color: #DAC1F1;
-    color: #001D3D !important;
+    color: #030303 !important;
+}
+.filters-container {
+    display: flex;
+    justify-content: center; /* horizontal centering */
+    align-items: flex-start; /* stick to the top */
+    width: 100%;
+    padding-top: 2rem;      /* optional spacing from top */
+}
+
+.filters {
+    display: flex;
+    align-items: center;     /* vertically align "Filters" with the pills */
+    gap: 1rem;               /* space between the word and the pills */
+    flex-wrap: wrap;         /* wrap pills if needed */
+}
+
+
+.filters .tags {
+    display: flex;
+    gap: 8px;             /* spacing between pills */
+    flex-wrap: wrap;      /* wrap pills if needed */
+}
+
+.filters .tags p {
+    display: inline-block; 
+    padding: 6px 12px;
+    margin: 0;
+    border-radius: 50px;
+    background-color: rgba(218, 193, 241, 0.15);
+    border: 1px solid rgba(218, 193, 241, 0.6);
+    color: #DAC1F1;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.filters .tags p:hover {
+    background-color: #DAC1F1;
+    color: #001D3D;
+}
+
+.masterlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* grow to fill */
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1rem;
+    max-width: 1200px; /* keeps the grid centered */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.masterlist-grid .prj {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 2px solid rgba(218, 193, 241, 0.5);
+    background-color: #001D3D;
+    box-sizing: border-box;
+    padding: 1rem;
+    gap: 0.5rem;
+    width: 100%; /* take available grid width */
+}
+
+
+/* Image */
+.masterlist-grid .prj img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Content container */
+.masterlist-grid #prjcontent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* space between h2, p, tags */
+}
+
+/* Tags container */
+.masterlist-grid .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;  /* small spacing between pills */
+}
+
+/* Individual tags */
+.masterlist-grid .tags p {
+    display: inline-block;
+    padding: 2px 6px;  
+    margin: 0;
+    border-radius: 50px;
+    background-color: rgba(218, 193, 241, 0.15);
+    border: 1px solid rgba(218, 193, 241, 0.6);
+    color: #DAC1F1;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.masterlist-grid .tags p:hover {
+    background-color: #DAC1F1;
+    color: #001D3D;
+}
+
+/* Buttons container */
+.masterlist-grid .prj-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;   /* keep buttons below tags */
+    flex-wrap: wrap;    /* wrap if two buttons don't fit */
+}
+
+/* Buttons */
+.masterlist-grid .prj-buttons button {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    background-color: #DAC1F1;
+    border: 1px solid #DAC1F1;
+    color: #001D3D;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.masterlist-grid .prj-buttons button:hover {
+    background: transparent;
+    color: #DAC1F1;
+    border-color: #DAC1F1;
 }

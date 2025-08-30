@@ -180,12 +180,32 @@
                 </div>
             </div>
         </div>
-        <div id="certifications">
-            <h2>Certifications</h2>
+    </section>
+    <footer>
+        <h2 style="color: #dac1f1;">Contact Me</h2>
+        <div id="me">
+            <h4>Laraib Syed</h4>
+            <p>Drop me a mail: laraibsyed92@gmail.com (Typically responds in 2 business days)</p>
+            <p>Dubai, UAE <span id="time"></span></p>
         </div>
 
-    </section>
+        <div class="socials">
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-behance"></i>
+        </div>
 
+    </footer>
+
+    <script>
+        function showTime() {
+            const timeNow = new Date().toLocaleTimeString();
+            document.getElementById('time').textContent = timeNow;
+        }
+
+        showTime();
+        setInterval(showTime, 1000);
+    </script>
 </body>
 
 </html>
