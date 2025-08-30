@@ -716,7 +716,8 @@ footer h2 {
 
 #moreabout {
     width: 99vw;
-    min-height: 88vh; /* makes sure it's at least this tall, but grows if needed */
+    min-height: 88vh;
+    /* makes sure it's at least this tall, but grows if needed */
     padding: 20px;
     box-sizing: border-box;
 }
@@ -724,13 +725,16 @@ footer h2 {
 
 #edu-container {
     display: flex;
-    gap: 3vw; /* space between edu and edume */
-    padding: 0 20px; /* space on the outer left and right */
+    gap: 3vw;
+    /* space between edu and edume */
+    padding: 0 20px;
+    /* space on the outer left and right */
 }
 
-#edu { 
+#edu {
     flex: 3;
-    padding: 1vh 2vw; /* top-bottom 10px, left-right 20px */
+    padding: 1vh 2vw;
+    /* top-bottom 10px, left-right 20px */
     border: 1px solid #DAC1F1;
     border-radius: 20px;
 }
@@ -738,8 +742,10 @@ footer h2 {
 
 
 #edume {
-    flex: 2;  /* slightly smaller */
-    padding: 4vh 2vw; /* top-bottom relative to height, left-right relative to width */
+    flex: 2;
+    /* slightly smaller */
+    padding: 4vh 2vw;
+    /* top-bottom relative to height, left-right relative to width */
     border: 1px solid #DAC1F1;
     border-radius: 20px;
 }
@@ -764,25 +770,26 @@ footer h2 {
     white-space: nowrap;
 }
 
-#moreabout h1{
+#moreabout h1 {
     font-size: 40px;
     color: #DAC1F1;
 }
 
-#moreabout h2{
+#moreabout h2 {
     font-size: 35px;
     color: #DAC1F1;
 }
 
-#moreabout h3{
+#moreabout h3 {
     font-size: 25px;
 }
 
-#moreabout p{
+#moreabout p {
     color: rgba(218, 193, 241, 0.5);
 }
 
-#moreabout h2,h4{
+#moreabout h2,
+h4 {
     line-height: 0.5;
 }
 
@@ -796,7 +803,143 @@ footer h2 {
     background-position: center;
     background-repeat: no-repeat;
 
-    margin: 0 auto; /* centers horizontally */
-    display: block; /* makes margin: auto work */
+    margin: 0 auto;
+    /* centers horizontally */
+    display: block;
+    /* makes margin: auto work */
 }
 
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    /* heading left, button right */
+    align-items: center;
+    /* vertically center them */
+    margin-top: 2rem;
+    /* moves the section down */
+    margin-bottom: 1rem;
+    /* spacing below */
+}
+
+
+.experience-header h2 {
+    margin: 0;
+    /* remove default margin */
+}
+
+button .fa-solid {
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #001D3D !important;
+}
+
+button:hover .fa-solid {
+    color: #DAC1F1 !important;
+    transform: translateX(5px);
+    /* optional: move the arrow */
+}
+
+
+
+/* Center the timeline container */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    max-width: 1500px;
+    /* wider than 900px */
+    width: 1000%;
+    /* responsive instead of fixed */
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 1fr auto 2fr;
+    align-items: flex-start;
+    gap: 5rem;
+    margin-bottom: 3rem;
+    color: #EDEDED;
+}
+
+.timeline-left {
+    text-align: right;
+}
+
+.timeline-left .date,
+.timeline-left .location,
+.timeline-left .workmode {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-left .company {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #dac1f1;
+}
+
+
+.timeline-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    /* moves it down 10px */
+    /* OR using transform */
+    /* transform: translateY(10px); */
+}
+
+
+.timeline-right .role {
+    color: #dac1f1;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-right ul {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-right li {
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.timeline .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    /* space between pills */
+    padding-bottom: 2vw;
+    color: #DAC1F1 !important;
+}
+
+/* Each tag/pill */
+.timeline .tags p {
+    display: inline-block;
+    /* size to content */
+    margin: 0;
+    padding: 6px 12px;
+    /* vertical + horizontal padding */
+    white-space: nowrap;
+    /* prevent wrapping inside the pill */
+    border-radius: 50px;
+    /* fully rounded */
+    font-size: 0.9rem;
+    background-color: rgba(218, 193, 241, 0.15);
+    border: 1px solid rgba(218, 193, 241, 0.6);
+    color: #DAC1F1 !important;
+    transition: 0.25s ease;
+    width: auto !important;
+    /* force auto width */
+    flex: initial !important;
+    /* prevent flex from stretching */
+}
+
+/* Hover effect */
+.timeline .tags p:hover {
+    background-color: #DAC1F1;
+    color: #001D3D !important;
+}
